@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flashcard Quiz App</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Flashcard Quiz App</h1>
+      <span class="badge">Local Save • Offline</span>
+    </header>
+
+    <div class="grid">
+      <section class="panel">
+        <div class="label">Study</div>
+        <div class="card" id="card">
+          <div class="qa">
+            <div class="q" id="q">No flashcards yet</div>
+            <div class="a" id="a"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="prevBtn">Previous</button>
+          <button id="toggleBtn" class="primary">Show Answer</button>
+          <button id="nextBtn">Next</button>
+          <button id="editBtn" class="warn">Edit</button>
+          <button id="deleteBtn" class="danger">Delete</button>
+        </div>
+        <div class="meta">
+          <span id="count">0 / 0</span>
+          <span class="dot"></span>
+          <span id="status" class="muted">Ready</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="label">Add / Edit</div>
+        <form class="form" id="form">
+          <div class="row">
+            <input id="question" placeholder="Question" />
+            <textarea id="answer" placeholder="Answer"></textarea>
+          </div>
+          <div class="split">
+            <button type="submit" class="success" id="saveBtn">Save</button>
+            <button type="button" id="newBtn">New</button>
+            <button type="button" id="clearAllBtn">Clear All</button>
+            <span class="pill" id="modePill">Mode: Add</span>
+          </div>
+        </form>
+
+        <div class="label" style="margin-top:8px">Your Flashcards</div>
+        <div class="list" id="list"></div>
+      </section>
+    </div>
+
+    <div class="footer">
+      Made for CodeAlpha Task 1 • Flashcards persist in your browser using LocalStorage<br>
+      <small>Made by Muhammad Haris</small>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
